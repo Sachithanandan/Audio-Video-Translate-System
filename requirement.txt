@@ -1,0 +1,9 @@
+transformers
+pytube
+fasttext
+moviepy
+pydub
+youtube_transcript_api
+ai4bharat-transliteration
+ffmpeg
+ffprobe-0.5cmd
