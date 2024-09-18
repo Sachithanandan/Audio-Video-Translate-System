@@ -10,7 +10,7 @@ from moviepy.editor import *
 import os
 
 # libraries for audio to english text
-# https://www.thepythoncode.com/article/using-speech-recognition-to-convert-speech-to-text-python
+# https://www.thep ythoncode.com/article/using-speech-recognition-to-convert-speech-to-text-python
 # pip3 install SpeechRecognition pydub
 # https://www.arxiv-vanity.com/papers/1710.08969/
 
@@ -28,8 +28,8 @@ from youtube_transcript_api import YouTubeTranscriptApi
 from ai4bharat.transliteration import XlitEngine
 
 # load a transliteration models
-english2vernacular = XlitEngine(src_script_type="roman", beam_width=10, rescore=False)
-vernacular2english = XlitEngine(src_script_type="indic", beam_width=10, rescore=False)
+# english2vernacular = XlitEngine(src_script_type="roman", beam_width=10, rescore=False)
+# vernacular2english = XlitEngine(src_script_type="indic", beam_width=10, rescore=False)
 
 # Text Lang Detection
 pretrained_lang_model = "modules/supportFile/lid218e.bin" # Path of model file
@@ -277,13 +277,13 @@ language = {
 
 # text - english text , lang- transliteration language name
 def englishtovernacular(text,lang):
-  out = english2vernacular.translit_sentence(text,lang_code = lang)
+  out = englishtovernacular.translit_sentence(text,lang_code = lang)
   return out
 
 # text - vernacular text , lang - vernacular language name
 def vernaculartoenglish(text,lang):
   lang_code = language[lang]
-  out = vernacular2english.translit_sentence(text,lang_code = lang_code)
+  out = vernaculartoenglish.translit_sentence(text,lang_code = lang_code)
   return out
 
 
